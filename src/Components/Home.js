@@ -42,15 +42,17 @@ export default function Home() {
 
   return (
     <div>
-      <section className="AppDescription">
+      <section>
         <h2>Welcome to Fitness4All!</h2>
         <br/>
-        <p>This website is made for people who want to include exercise to their weekly routine for overall health, in a simple yet effective way.</p>
+        <p>This website is made for people who want to include exercise into their weekly routine for overall health, in a simple yet effective way.</p>
         <br/>
-        <p>If you already have a good grasp on exercise science, feel free to browse through our <Link to='/exercises'>list of exercises</Link> and select your favorite exercises from each muscle group to build out your very own printable workout routine.</p>
+        <p>If you already have a good grasp on exercise science, feel free to browse through our <Link to='/exercises'>list of exercises</Link> and select your favorites from each muscle group to build out your very own printable workout routine.</p>
         <br/>
         <p>If you would like a customized routine based on your experience, availability, goals and more, feel free to answer the following questions:</p>
         <br/>
+      </section>
+      
         <form onSubmit={handleSubmit}>
 
             <label htmlFor='experienceLevel'>How would you rate your level of experience with strength based exercises?</label>
@@ -90,25 +92,34 @@ export default function Home() {
               checked={profile.hasGym}
             />
 
-            <label htmlFor='preference'>Which of the following would you like to include in your routine?</label>
+            <p>Which of the following would you like to include in your routine?</p>
+            <label htmlFor='calisthenics'>Calisthenics (bodyweight exercises)</label>
             <input
               id="calisthenics"
               type="checkbox"
               onChange={() => handlePreferenceChange(profile.preference.calisthenics)}
               checked={profile.preference.calisthenics}
             />
-            <input
-              id="machines"
-              type="checkbox"
-              onChange={() => handlePreferenceChange(profile.preference.machines)}
-              checked={profile.preference.machines}
-            />
+
+            <label htmlFor='freeWeights'>Free Weights (dumbbells, barbells, etc.)</label>
             <input
               id="freeWeights"
               type="checkbox"
               onChange={() => handlePreferenceChange(profile.preference.freeWeights)}
               checked={profile.preference.freeWeights}
             />
+
+            {profile.hasGym ? 
+              <section>
+                <label htmlFor='machines'>Machines</label>
+                <input
+                  id="machines"
+                  type="checkbox"
+                  onChange={() => handlePreferenceChange(profile.preference.machines)}
+                  checked={profile.preference.machines}
+                />
+              </section>
+            : null}
 
             <label htmlFor='fitnessGoal'>What do you hope to achieve as a result of exercise?</label>
             <select
@@ -119,7 +130,7 @@ export default function Home() {
               required
             >
               <option></option>
-              <option value='Overall Health'>Overall Health</option>
+              <option value='Overall Health'>Better Overall Health</option>
               <option value='Weight Loss'>Weight Loss</option>
               <option value='Hypertrophy'>Hypertrophy (gain muscle mass)</option>
               <option value='Strength'>Strength</option>
@@ -128,8 +139,6 @@ export default function Home() {
             <input type='submit' />
 
         </form>
-        
-      </section>
     </div>
   )
 }
