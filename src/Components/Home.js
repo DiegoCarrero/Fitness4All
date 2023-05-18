@@ -11,12 +11,12 @@ export default function Home() {
     experienceLevel: '',
     daysPerWeek: 0,
     hasGym: false,
-    fitnessGoal: '',
     preference: {
         calisthenics: false,
         machines: false,
         freeWeights: false,
-    }
+    },
+    fitnessGoal: '',
   })
 
   function handleOptionChange(event) {
@@ -24,11 +24,15 @@ export default function Home() {
   }
 
   function handleNumberOptionChange(event) {
-    setProfile({...profile, [event.target.id]: Number(event.target.value)})
+    setProfile({ ...profile, [event.target.id]: Number(event.target.value)})
   } 
 
-  const handleHasGymChange = () => {
+  function handleHasGymChange() {
     setProfile({ ...profile, hasGym: !profile.hasGym });
+  }
+
+  function handlePreferenceChange(item) {
+    setProfile({ ...profile, [preference.item]: !item })
   }
 
   function handleSubmit(event) {
@@ -69,15 +73,59 @@ export default function Home() {
               name='daysPerWeek'
               id='daysPerWeek'
               value={profile.daysPerWeek}
-              onChange={handleOptionChange}
+              onChange={handleNumberOptionChange}
               required
             >
               <option></option>
               <option value='3'>3</option>
-              <option value='Beginner'>Beginner</option>
-              <option value='Intermediate'>Intermediate</option>
-              <option value='Advanced'>Advanced</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
             </select>
+
+            <label htmlFor='hasGym'>Are you currently subscribed to a gym?</label>
+            <input
+              id="hasGym"
+              type="checkbox"
+              onChange={handleHasGymChange}
+              checked={profile.hasGym}
+            />
+
+            <label htmlFor='preference'>Which of the following would you like to include in your routine?</label>
+            <input
+              id="calisthenics"
+              type="checkbox"
+              onChange={() => handlePreferenceChange(profile.preference.calisthenics)}
+              checked={profile.preference.calisthenics}
+            />
+            <input
+              id="machines"
+              type="checkbox"
+              onChange={() => handlePreferenceChange(profile.preference.machines)}
+              checked={profile.preference.machines}
+            />
+            <input
+              id="freeWeights"
+              type="checkbox"
+              onChange={() => handlePreferenceChange(profile.preference.freeWeights)}
+              checked={profile.preference.freeWeights}
+            />
+
+            <label htmlFor='fitnessGoal'>What do you hope to achieve as a result of exercise?</label>
+            <select
+              name='fitnessGoal'
+              id='fitnessGoal'
+              value={profile.fitnessGoal}
+              onChange={handleOptionChange}
+              required
+            >
+              <option></option>
+              <option value='Overall Health'>Overall Health</option>
+              <option value='Weight Loss'>Weight Loss</option>
+              <option value='Hypertrophy'>Hypertrophy (gain muscle mass)</option>
+              <option value='Strength'>Strength</option>
+            </select>
+            <br/>
+            <input type='submit' />
 
         </form>
         
