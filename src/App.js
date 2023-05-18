@@ -7,6 +7,7 @@ import ExerciseDetails from './Components/ExerciseDetails';
 import EditExercise from './Components/EditExercise';
 import NewExercise from './Components/NewExercise';
 import WorkoutRoutine from './Components/WorkoutRoutine';
+import NotFound from './Components/NotFound';
 
 function App() {
 
