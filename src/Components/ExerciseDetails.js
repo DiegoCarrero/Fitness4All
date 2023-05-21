@@ -13,7 +13,6 @@ export default function ExerciseDetails() {
   useEffect(() => {
     axios.get(`${API}/exercises/${id}`)
       .then((response) => {
-        console.log(response.data);
         setExercise(response.data);
       }).catch((e) => console.warn('catch', e))
   }, [id, API])
