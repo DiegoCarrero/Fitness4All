@@ -23,7 +23,6 @@ export default function NewExercise() {
 
   function handleOptionChange(event) {
     setNewExercise({ ...newExercise, [event.target.id]: event.target.value });
-    console.log(newExercise);
   }
 
   function handleSubmit(event) {
@@ -34,8 +33,8 @@ export default function NewExercise() {
         console.log('exercise added', newExercise)
       },
       (error) => console.error(error)
-    )
-    .catch((c) => console.warn('catch', c));
+      )
+      .catch((c) => console.warn('catch', c));
   }
 
   return (
