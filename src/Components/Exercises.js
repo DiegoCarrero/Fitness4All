@@ -12,7 +12,6 @@ export default function Exercises() {
     axios.get(`${API}/exercises`)
     .then((response) => {
       setExercises(response.data)
-      console.log(response.data)
     })
     .catch((error) => console.warn(error))
   }, [])
