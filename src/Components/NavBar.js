@@ -10,10 +10,10 @@ export default function NavBar() {
       </h1>
       {/* <p>Fitness made simple</p> //slogan */}
       <h2>
-        <Link to='/snacks'>All Exercises</Link>
+        <Link to='/exercises'>All Exercises</Link>
       </h2>
       <button>
-        <Link to='/snacks/new'>Add an Exercise</Link>
+        <Link to='/exercises/new'>Add an Exercise</Link>
       </button>
     </div>
   )
