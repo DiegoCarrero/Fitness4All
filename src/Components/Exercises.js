@@ -10,7 +10,10 @@ export default function Exercises() {
 
   useEffect(() => {
     axios.get(`${API}/exercises`)
-    .then((response) => setExercises(response.data))
+    .then((response) => {
+      setExercises(response.data)
+      console.log(response.data)
+    })
     .catch((error) => console.warn(error))
   }, [])
 
