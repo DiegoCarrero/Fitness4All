@@ -19,7 +19,7 @@ export default function Exercises() {
 
 
   return (
-    <div>
+    <div className="index">
       {
         exercises.map((exercise) => {
             return <Exercise key={exercise.id} exercise={exercise} />
