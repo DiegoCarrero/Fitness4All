@@ -52,8 +52,8 @@ export default function Home() {
   }
 
   return (
-    <div>
-      <section>
+    <div className='Home'>
+      <section className='Intro'>
         <h2>Welcome to Fitness4All!</h2>
     
         <p>This website is made for people who want to include exercise into their weekly routine for overall health, in a simple yet effective way.</p>

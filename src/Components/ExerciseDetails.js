@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import '../Styles/ExerciseDetails.css';
 
 const API = process.env.REACT_APP_API_URL;
 

@@ -1,0 +1,12 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+

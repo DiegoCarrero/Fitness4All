@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Exercise from "./Exercise";
+import '../Styles/Exercises.css';
 
 const API = process.env.REACT_APP_API_URL;
 
