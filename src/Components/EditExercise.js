@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import '../Styles/EditExercise.css'
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -42,7 +43,7 @@ export default function EditExercise() {
   }
 
   return (
-    <div>
+    <div className="Edit">
       <br/><br/>
       <form onSubmit={handleSubmit}>
 
