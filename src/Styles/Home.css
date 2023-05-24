@@ -1,8 +1,13 @@
-/* .Home {
-    display: flex;
-} */
+.Home {
+    background-color: black;
+    color: white;
+} 
 
-/* .intro {
-    justify-content: center;
-    width: 80%;
-} */
+.Intro {
+    margin: 50px 100px 0px 100px;
+    padding-top: 20px;
+}
+
+form {
+    padding-bottom: 21px;
+}
