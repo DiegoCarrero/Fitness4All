@@ -1,9 +1,17 @@
 .Show {
     background-color: black;
     color: white;
-    padding-bottom: 128px;
+    padding-bottom: 85px;
 }
 
 .exercise-name {
     padding-top: 20px;
+}
+
+p {
+    margin: 0 150px;
+}
+
+button {
+    margin: 20px;
 }
