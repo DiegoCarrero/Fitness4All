@@ -58,7 +58,7 @@ export default function Home() {
     
         <p>This website is made for people who want to include exercise into their weekly routine for overall health, in a simple yet effective way.</p>
         
-        <p>If you already have a good grasp on exercise science, feel free to browse through our <Link to='/exercises'>list of exercises</Link> and select your favorites from each muscle group to build out your very own printable workout routine.</p>
+        <p>If you already have a good grasp on exercise science, feel free to browse through our <Link className='link' to='/exercises'>list of exercises</Link> and select your favorites from each muscle group to build out your very own printable workout routine.</p>
         
         <p>If you would like a customized routine based on your experience, availability, goals and more, feel free to answer the following questions:</p>
       </section>

@@ -4,10 +4,16 @@
 } 
 
 .Intro {
-    margin: 50px 100px 0px 100px;
-    padding-top: 20px;
+    margin: 15px 100px 0px 100px;
+    padding-top: 30px;
+    font-size: larger;
+}
+
+.link {
+    color: white;
 }
 
 form {
-    padding-bottom: 21px;
+    font-size: larger;
+    padding-bottom: 10px;
 }
