@@ -16,7 +16,7 @@ export default function ExerciseDetails() {
       .then((response) => {
         setExercise(response.data);
       }).catch((e) => console.warn('catch', e))
-  }, [id, API])
+  }, [id])
 
   function deleteExercise() {
     axios.delete(`${API}/exercises/${id}`)
