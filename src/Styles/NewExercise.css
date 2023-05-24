@@ -1,0 +1,11 @@
+.New {
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 175px;
+    margin-top: 15px;
+}
+
+label {
+    padding-right: 10px;
+}

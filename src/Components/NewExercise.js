@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import '../Styles/NewExercise.css'
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -38,7 +39,7 @@ export default function NewExercise() {
   }
 
   return (
-    <div>
+    <div className="New">
       <br/><br/>
       <form onSubmit={handleSubmit}>
 
