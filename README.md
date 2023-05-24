@@ -1,8 +1,8 @@
-# [Fitness4All]()
+# [Fitness4All](https://cheerful-haupia-608370.netlify.app/)
 
 #### [Backend Repo](https://github.com/DiegoCarrero/Fitness4All-Backend) -- [Backend URL](https://fitness4all.onrender.com)
 
-#### [Click here]() to view the site!
+#### [Click here](https://cheerful-haupia-608370.netlify.app/) to view the site!
 
 #### [Trello Board](https://trello.com/invite/b/yAGyfFx3/ATTI29bf634e2274fa61f223f09adb903ea444920644/fitness4all-app)
 
