@@ -29,8 +29,8 @@ export default function ExerciseDetails() {
   }
 
   return (
-    <div>
-      <h1>{exercise.name}</h1>
+    <div className="Show">
+      <h1 className="exercise-name">{exercise.name}</h1>
       <img src={exercise.image} alt={exercise.name} />
       <h3>Main Muscle Group: {exercise.muscle_group}</h3>
       <h3>Targeted Muscles: {exercise.targeted_muscles}</h3>
